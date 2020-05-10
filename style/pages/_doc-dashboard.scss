@@ -1,0 +1,55 @@
+.p-doc-dashboard{
+    &__content{
+        // width: 1000px;
+        max-width: 100%;
+    }
+    &__top-card-wrapper{
+        width: 100%;
+        display: flex;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+    }
+    &__top-card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // flex-direction: column;
+        flex: 1 0 33%;
+        padding: 15px;
+        &:not(:last-child){
+            border-right: 1px solid rgba($black, .3);
+        }
+        p{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__shadow{
+        box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+    }
+    &__top-card-icon{
+        padding-right: 1rem;
+        width: 70px;
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__top-card-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // flex: 1;
+    }
+    .ant-table-pagination{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .ant-table-thead > tr > th{
+        background-color: transparent;
+        font-size: 20px;
+    }
+}

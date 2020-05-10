@@ -1,0 +1,46 @@
+.c-review-card{
+    &__info-wrapper{
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    &__info{
+        padding-left: 10px;
+    }
+    &__author{
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    &__date{
+        margin-bottom: 0;
+    }
+    &__text{
+        color: rgba($black, .8);
+    }
+    &__text-wrapper{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &__rate{
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+        @media (min-width: 1200px) {
+            width: 25%;
+        }
+        &-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &-label{
+            margin-bottom: 0;
+            color: $dark;
+            font-weight: 500;
+        }
+    }
+}

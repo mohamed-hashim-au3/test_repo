@@ -1,0 +1,9 @@
+.c-header{
+    background-color: $white;
+    width: 100%;
+    // color: $white;
+    &__inner{
+        @include make-container();
+        @include make-container-max-widths();
+    }
+}

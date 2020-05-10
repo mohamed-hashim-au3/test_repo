@@ -1,0 +1,27 @@
+.c-doctor-info{
+    width: 570px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    @media(min-width: 1600px){
+        width: 743px;
+    }
+    &__avatar{
+        margin-bottom: 20px;
+    }
+    &__name,&__address{
+        color: #c1c1c1;
+        max-width: 100%;
+        padding-left: 50px;
+        // font-family: $mainFont;
+    }
+    &__name{
+        color: #ffffff;
+        font-size: 24px;
+        text-transform: capitalize;
+    }
+    &__address{
+        width: 350px;
+    }
+}

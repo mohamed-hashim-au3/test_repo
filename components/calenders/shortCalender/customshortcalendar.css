@@ -1,0 +1,18 @@
+.c-short-calendar__ap_badge {
+
+    bottom: 35px;
+    left: 14px;   
+}
+.c-short-calendar__ap_badge .ant-badge-count{
+   
+    background: #f34b8c ;
+ 
+}
+.c-short-calendar__ap_custom .ant-fullcalendar-selected-day .ant-fullcalendar-value, .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-value{
+    background: #874285!important;
+    box-shadow: 0 0 0 1px #874285 inset;
+    
+}
+.c-short-calendar__ap_custom .ant-fullcalendar-today .ant-fullcalendar-value, .ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-value{
+    box-shadow: 0 0 0 1px #874285 inset;
+}

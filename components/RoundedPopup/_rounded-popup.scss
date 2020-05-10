@@ -1,0 +1,19 @@
+.c-rounded-popup{
+    .ant-modal{
+        &-content{
+            border-radius: 10px;
+        }
+        &-body{
+            display: flex;
+            @media (min-height: 620px){
+                height: 700px;
+                overflow: auto;
+            }
+        }
+    }
+    &.ant-modal{
+        @media (max-height: 920px){
+            
+        }
+    }
+}

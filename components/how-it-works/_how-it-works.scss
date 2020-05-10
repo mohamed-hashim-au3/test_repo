@@ -1,0 +1,66 @@
+.c-how-it-works{
+    margin-top: 100px;
+    &__top-container{
+        padding-bottom: 100px;
+    }
+    &__steps{
+        margin: -100px auto 120px;
+        width: 1200px;
+        max-width: 100%;
+    }
+    &__step{
+        &--1,
+        &--2{
+            &:after{
+                position: absolute;
+                top: 0;
+                top: 20px;
+                content: '';
+                left: -110px;
+                width: 235px;
+                height: 148px;
+                background: url(/images/how-it-work/line-01.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                @media (max-width: 1240px){
+                    display: none;   
+                }
+            }
+        }
+        &--2{
+            &:after{
+                left: -120px;
+                background: url(/images/how-it-work/line-02.png);
+            }
+        }
+        &-img{
+            width: 90px;
+            margin: 0 auto;
+            display: block;
+            &-wrapper{
+                display: inline-block;
+                width: auto;
+                padding: 20px;
+                margin-bottom: 30px;
+                text-align: center;
+                border-radius: 100%;
+                background: url(/images/how-it-work/border-img.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            &-inner{
+                width: 160px;
+                height: 160px;
+                margin: 0 auto;
+                background: #fff;
+                border-radius: 100%;
+                box-shadow: 0 0 20px 0 rgba($black,0.1);
+                text-align: center;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+    }
+}

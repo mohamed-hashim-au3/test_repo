@@ -1,0 +1,102 @@
+$container-width: 1200px;
+$max-site-width: 1600px;
+
+//sizes
+$nav-size: 14px;
+$base-font-size: 14px;
+$font-size-xxl: 20px;
+$header-height: 124px;
+
+$bannerHeight: 300px;
+$bannerHeightMd: 600px;
+$bannerHeightLg: 1000px;
+
+$g-bp-xxs: 375px;
+$g-bp-xs: 544px;
+$g-bp-sm: 768px;
+$g-bp-md: 992px;
+$g-bp-lg: 1200px;
+$g-bp-xl: 1400px;
+$g-bp-xxl: 1800px;
+
+// fonts
+$main-font: 'Poppins', sans-serif;
+$sub-font: 'Ovo', serif;
+
+//colors
+
+// brand colors
+$brand-color-1: #954fba;
+$brand-color-2: #fff04b;
+$brand-color-3: #00e6af;
+$brand-color-4: #d1a3fb;
+
+// text color
+$text-base: #767676;
+$heading-color: $brand-color-1;
+
+// basic color
+$black: #000000;
+$white: #ffffff;
+
+// color for bootstrap
+$primary: #3fabf3;
+$danger: #ff5851;
+$secondary: #e8f6ff;
+$light: #f7f7f7;
+$dark:  #3d4461;
+$success:  #00cc8d;
+
+// override bootstrap
+
+
+// grid
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 544px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1400px,
+  xxl: 1800px
+) !default;
+
+// grid container
+
+$container-max-widths: (
+  xxs: 400px,
+  xs: 500px,
+  sm: 720px,
+  md: 960px,
+  lg: 1140px,
+  xl: 1300px,
+  xxl: 1600px
+) !default;
+
+$btn-border-width: 2px;
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    // "info":       $info,
+    // "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+);
+
+
+$link-color: $dark;
+$headings-color: $dark;
+$headings-font-family: $main-font;
+$font-weight-bold: 600;
+
+$font-size-base:  1rem;
+
+$h1-font-size:    $font-size-base * 3.5;
+$h2-font-size:    $font-size-base * 3;
+$h3-font-size:    $font-size-base * 2.5;
+$h4-font-size:    $font-size-base * 2;
+$h5-font-size:    $font-size-base * 1.5;
+$h6-font-size:    $font-size-base;

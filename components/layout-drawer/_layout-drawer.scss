@@ -1,0 +1,58 @@
+.c-layout-drawer{
+    display: flex;
+    min-height: 100%;
+    &__main{
+        transition: all .4s;
+        flex: 1 0 calc(100% - 450px);
+    }
+    &__aside{
+        transition: all .4s;
+        padding-left: 50px;
+        flex: 1 0 450px;
+        position: relative;
+        &-tgl-wrapper{
+            position: absolute;
+            left: 0px;
+            background: white;
+            width: 50px;
+            height: 40px;
+            top: 100px;
+            box-shadow: -6px 0px 8px rgba(0, 0, 0, .05);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            .anticon{
+                display: block;
+            }
+        }
+        &-content{
+            background-color: #fff;
+            width: 100%;
+            min-height: 100%;
+            & > *{
+                
+                opacity: 1;
+                transition: all .1s;
+            }
+        }
+    }
+    &--closed{
+        .c-layout-drawer{
+            &__main{
+                flex: 1 0 calc(100% - 50px);
+            }
+            &__aside{
+                flex: 1 0 50px;
+                overflow: hidden;
+                &-content{
+                    & > *{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}

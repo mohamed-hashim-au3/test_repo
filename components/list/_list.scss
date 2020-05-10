@@ -1,0 +1,36 @@
+.c-list{
+    padding-left: 5px;
+    &__item{
+        display: block;
+        padding-bottom: 2px;
+    }
+    &__link{
+        cursor: pointer;
+        position: relative;
+        padding-left: 0;
+        transition: all .2s;
+        border-bottom: 1px dotted;
+        &:hover{
+            padding-left: 14px;
+            text-decoration: none;
+            &:after{
+                opacity: 1;
+            }
+        }
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: $danger;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+}

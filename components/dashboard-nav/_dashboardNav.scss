@@ -1,0 +1,30 @@
+.c-dashboard-nav{
+    display: flex;
+    flex-direction: column;
+    &__item{
+        position: relative;
+        width: 100%;
+    }
+    &__link{
+        cursor: pointer;
+        display: flex;
+        text-align: left;
+        padding: 7px 15px;
+        margin: 5px 0 0;
+        border-radius: 0;
+        position: relative;
+        color: $light;
+        opacity: 0.8;
+        &:hover{
+            opacity: 1;
+            text-decoration: none;
+            color: #3ebfea;
+        }
+    }
+    &__icon{
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+}

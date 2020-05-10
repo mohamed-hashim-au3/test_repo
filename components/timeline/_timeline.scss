@@ -1,0 +1,81 @@
+.timeline{
+    &__wrapper{
+        margin-top: 10px;
+    }
+    &__time{
+            font-weight: bold;
+            :after {
+                content: '';
+                height: 3px;
+                width: 33px;
+                background: #ccc;
+                position: absolute;
+                top: 10px;
+                right: 7px;
+            }
+    }
+    &__active{
+      color:#1890ff;
+    }
+    
+}
+.c-timeline-drover{
+    &__row {
+        display: block;
+        padding: 10px;
+        padding-top: 40px;
+    }
+    &__col {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        border-bottom: 1px solid #ccc;
+        &:first-child{
+            border-top: 1px solid #ccc;
+        }
+        &:before{
+            content: attr(data-time);
+            font-size: 14px;
+        }
+    }
+    &__msg{
+        position: absolute;
+        left: 60px;
+        right: 0;
+        top: -1px;
+        height: 60px;
+        overflow: hidden;
+        padding: 5px 15px !important;
+        @for $i from 1 through 24 {
+            &--span-#{$i} {
+              height: $i * 60px
+            }
+        }
+    }
+    &__tgl-wrapper {
+        position: absolute;
+        left: -30px;
+        background: white;
+        width: 30px;
+        height: 40px;
+        box-shadow: -6px 0px 8px rgba(0, 0, 0, .05);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .anticon{
+            display: block;
+        }
+    }
+}
+.custom-timeline-drover-style-aakash.ant-drawer{
+    .ant-drawer-wrapper-body{
+        overflow: auto visible;
+    }
+    .ant-drawer-content{
+        overflow: visible !important;
+    }
+}

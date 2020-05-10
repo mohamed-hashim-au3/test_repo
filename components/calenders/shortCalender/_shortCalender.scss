@@ -1,0 +1,14 @@
+.c-short-calender{
+    // padding-left: 50px;
+    width: 300px;
+    max-width: 100%;
+    .ant-fullcalendar{
+        border: none;
+    }
+    &__header-icon{
+        &--disabled{
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    }
+}

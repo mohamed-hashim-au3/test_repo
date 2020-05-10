@@ -1,0 +1,147 @@
+.c-footer{
+    &__address-icon {
+        width: 2em;
+        text-align: center;
+    }
+    &__bottom-section{
+        color: rgba($white, .9);
+        .c-list{
+            &__link{
+                color: rgba($white, .9);
+            }
+        }
+    }
+    &__middle{
+        &-bar{
+            position: relative;
+            &:after{
+                content: "";
+                display: block;
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 50%;
+                bottom: -5px;
+                background-color: $dark;
+            }
+            & > *{
+                position: relative;
+                z-index: 1;
+            }
+        }
+        &-pill{
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            background-color: $white;
+            box-shadow: 0 0px 15px rgba($black, .15);
+            padding: 1rem;
+            max-width: calc(100% - 40px);
+            @include bp-sm{
+                border-radius: 10em;
+            }
+        }
+        &-row{
+            display: flex;
+            @include bp-sm{
+                justify-content: space-between;
+            }
+            @include bpm-sm{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &-saperator{
+            align-self: center;
+            @include bpm-sm{
+                display: none;
+            }
+        }
+    }
+    &__number,
+    &__mid-email{
+        display: block;
+        color: $danger;
+        font-weight: bold;
+        font-size: 1.5em;
+        line-height: 1.1;
+        &:hover{
+            color: $danger;
+            text-decoration: none;
+        }
+        &-wrap{
+            display: flex;
+            @include bpm-sm{
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        &-icon{
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include bpm-sm{
+                padding-bottom: 10px;
+
+            }
+            img{
+                max-width: 70px;
+            }
+        }
+        &-text{
+            @include bpm-sm{
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 100%;
+                border-top: 1px solid rgba($black, .2);
+            }
+        }
+    }
+    &__number{
+        &-icon{
+            @include bp-sm{
+                border-right: 1px solid rgba($black, .2);
+            }
+        }
+        &-text{
+            padding-left: 10px;
+        }
+        &-wrap{
+            @include bpm-sm{
+                padding-bottom: 40px;
+            }
+        }
+    }
+    &__mid-email{
+        &-icon{
+            @include bp-sm{
+                border-left: 1px solid rgba($black, .2);
+                order: 2;
+            }
+        }
+        &-text{
+            @include bp-sm{
+                padding-right: 10px;
+                order: 1;
+            }
+        }
+        &-wrap{
+            @include bp-sm{
+                justify-content: flex-end;
+            }
+        }
+    }
+    &__copy-wrapper{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        background-color: darken($dark, 5%);
+        color: rgba($white, .9);
+    }
+    &__copy{
+        margin: auto;
+    }
+}

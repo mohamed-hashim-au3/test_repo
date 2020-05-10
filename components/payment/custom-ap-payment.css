@@ -1,0 +1,97 @@
+/* @media (min-width: 1024px){
+.custom-ap-card-wrapper-title {
+  
+    top: -35px;
+
+   
+}    
+} */
+   
+    .custom-ap-card-payment {
+        margin-bottom: 20px;
+        /* margin-top: 65px; */
+    }
+    .custom-ap-card-payment .field-container {
+        padding-bottom: 25px;
+    }
+    .custom-ap-card-payment label {
+
+        font-weight: bold;
+        color: #874285;
+    }
+
+    .custom-ap-card-payment Input {
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-radius: 0;
+        padding: 0;
+        margin-top: 0;
+        height: 32px;
+
+    }
+
+    .custom-ap-card-payment Input:hover {
+        border-color: #874285;
+    }
+
+    .custom-ap-card-payment Input:focus {
+        border-color: #874285;
+        outline: none;
+        box-shadow: none;
+    }
+   
+    .custom-ap-btn-containers-payment .custom-ap-back-btn {
+        background: #f34b8c;
+        border-color: #f34b8c;
+        color: #fff;
+    }
+    .custom-ap-btn-containers-payment .custom-ap-back-btn:hover {
+        background: #f34b8c;
+        border-color: #f34b8c;
+        color: #fff;
+    }
+    .custom-ap-btn-containers-payment Button{ 
+        width: 25%!important;
+        margin-left: 45px;
+    }
+    .custom-switch-ap-btn .switch-custom-button {
+       background: transparent;
+       border: 2px solid #d8dbe6;
+       float: right;
+    }
+    .custom-switch-ap-btn .switch-custom-button::after {
+       
+        background-color: #9298ad;
+       
+        box-shadow: none;
+        top: 0;
+    }
+    .custom-switch-ap-btn .ant-switch-checked::after {
+        
+        background: #874285;
+    }
+    /* .custom-payment-card-ap-wrapper .custom-ap-card-payment .expiration-field-container {
+        grid-area: expiration;
+        width: 85%!important;
+    } */
+    @media (min-width: 1024px)
+   {
+    .custom-payment-card-ap-wrapper {
+        min-height: auto;
+    }
+    .custom-payment-card-ap-wrapper .custom-ap-btn-containers-payment Button {
+        width: 50%;
+        margin-left: 45px;
+    }
+    .custom-payment-uppercard-ap-wrapper .custom-ap-btn-containers-payment {
+      
+       padding-bottom: 10px;
+      
+    }
+}
+
+
+
+
+    

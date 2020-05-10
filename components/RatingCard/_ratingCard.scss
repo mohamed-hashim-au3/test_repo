@@ -1,0 +1,79 @@
+.c-rating-card{
+    display: block;
+    padding: 5px;
+    // width: 800px;
+    max-width: 100%;
+    &__overall-col{
+        text-align: center;
+        // border-right: 1px solid rgba($black, .3);
+    }
+    &__overall-title{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 0;
+        color: $dark;
+    }
+    &__overall-rating{
+        font-size: 40px;
+        display: block;
+        font-weight: 500;
+        color: $danger;
+        @media (min-width: 1200px){
+            font-size: 50px;
+        }
+        @media (min-width: 1600px){
+            font-size: 56px;
+        }
+    }
+    &__reviews-wrapper{
+        padding-left: 20px;
+    }
+    &__reviews-card{
+        height: 100%;
+        padding: 0px;
+        border-radius: 15px;
+        box-shadow: 0px 0px  15px rgba($black, .05);
+    }
+}
+
+.c-bar-label{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 10px;
+    &__bar{
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        &-line{
+            width: 90px;
+            height: 4px;
+            border-radius: 5px;
+            background-color: #ccc;
+            margin-right: 10px;
+            position: relative;
+        }
+        &-line-bg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color: $danger;
+            animation: barToLeft .5s linear 0s 1;
+        }
+    }
+    &__value{
+        font-weight: 500;
+    }
+    &__icon-wrapper{
+        margin-right: 5px;
+    }
+}
+@keyframes barToLeft {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}

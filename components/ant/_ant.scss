@@ -1,0 +1,168 @@
+// ant override
+@mixin ant-step-state($state) {
+    .ant-steps-item-#{$state} & {
+        @content;
+    }
+}
+@mixin ant-radio-state($state) {
+    .ant-radio-#{$state} & {
+        @content;
+    }
+}
+@mixin has-error {
+    .has-error & {
+        @content;
+    }
+}
+.ant{
+    &-input {
+        color: #999;
+        outline: none;
+        height: 50px;
+        background: #fff;
+        font-size: 14px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        line-height: 18px;
+        padding: 10px 20px;
+        border-radius: 4px;
+        display: inline-block;
+        vertical-align: middle;
+        border: 2px solid #eee;
+        text-transform: inherit;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        
+        @include has-error{
+            color: $danger;
+        }
+        &-affix-wrapper{
+            .ant-input, .ant-input:hover{
+                @include has-error{
+                    border-color: $danger;
+                }
+            }
+        }
+    }
+    &-select-selection{
+        @extend .ant-input;
+        display: block;
+    }
+    &-radio{
+        &-group{
+            @extend .ant-input;
+            width: 100%;
+            display: flex;
+            padding: 0;
+        }
+        &-wrapper{
+            flex: 1;
+            border-right: 2px solid #eee;
+            padding: 10px 20px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            &:last-child{
+                border-right: 0;
+            }
+        }
+        &-inner{
+            width: 20px;
+            height: 20px;
+            border-width: 2px;
+            &:focus{
+                border-color: $success;
+            }
+            &:before{
+                content: "";
+                width: 5px;
+                height: 2px;
+                position: absolute;
+                left: 2px;
+                top: 9px;
+                background: #fff;
+                transform: rotate(45deg);
+            }
+            &:after{
+                background-color: #fff;
+                width: 10px;
+                height: 2px;
+                left: 4px;
+                top: 8px;
+                transform: rotate(-45deg) !important;
+            }
+            @include ant-radio-state(checked){
+                border-color: $success !important;
+                background-color: $success;
+            }
+        }
+        &-checked{
+            &:after{
+                border-color: $success;
+            }
+        }
+    }
+    &-form{
+        &-explain,
+        &-split{
+            @include has-error{
+                color: $danger;
+            }
+        }
+    }
+
+    // steps
+    &-steps{
+        justify-content: center;
+        &-icon{
+            @include ant-step-state(process){
+                color: $danger !important;
+            }
+            @include ant-step-state(finish){
+                color: $white !important;
+            }
+        }
+        &-item{
+            flex: 0 1 90px;
+            &-icon{
+                border-width: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                @include ant-step-state(wait){
+                    background-color: transparent;
+                }
+                @include ant-step-state(process){
+                    background-color: transparent;
+                    border-color: $danger;
+                }
+                @include ant-step-state(finish){
+                    background-color: $success;
+                    border-color: $success;
+                }
+            }
+            &-container{
+                display: flex;
+            }
+            &-title{
+                &:after{
+                    height: 2px;
+                    @include ant-step-state(finish){
+                        background-color: $success !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &-layout{
+        &-sider{
+            background-color: #3f4d67;
+            &-trigger{
+                background-color: #3f4d67;
+            }
+        }
+    }
+}

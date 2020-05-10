@@ -1,0 +1,40 @@
+.c-flickty{
+    overflow: hidden;
+    &__slider, .flickity-viewport{
+        &:focus{
+            outline: none;
+        }
+    }
+    .flickity-button {
+        background: transparent;
+        padding: 10px;
+        border: 2px solid;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        cursor: pointer;
+        border-radius: 50%;
+        color: rgba($black, .4);
+        margin-left: 10px;
+        &:hover{
+            color: theme-color("primary");
+            svg {
+                fill: theme-color("primary");
+            }
+        }
+        &:disabled{
+            color: rgba($black, .4);
+            opacity: 0.4;
+        }
+        
+        // &.next{
+        // }
+        svg {
+            @include full-abs;
+            width: 13px;
+            margin: auto;
+            fill: rgba($black, .6);
+        }
+    }
+    
+}

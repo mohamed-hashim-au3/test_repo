@@ -1,0 +1,53 @@
+.c-dr-card-long{
+    // margin-bottom: 20px;
+    margin-bottom: 0;
+    
+    &__description{
+        text-align: left;
+        padding-left: 15px;
+    }
+    &__title{
+        font-size: 20px;
+        display: block;
+        margin-bottom: 0;
+        text-transform: capitalize;
+    }
+    &__address{
+        text-transform: capitalize;
+        // color: $text-color-3;
+    }
+    &__designation{
+        font-size: 14px;
+        margin-bottom: 0px;
+        // color: $text-color-1;
+    }
+    &__time-wrap{
+        margin-left: auto;
+    }
+    &__img-wrap{
+        width: 150px;
+        padding: 10px 20px;
+    }
+    &__img{
+        max-width: 100%;
+        border-radius: 50%;
+        display: block;
+        margin: auto;
+        box-shadow: 0px 1px 2px 2px #ccc;
+    }
+    &__card{
+        border-radius: 0px;
+        border-top-width: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &:first-child{
+        .c-dr-card-long{
+            &__card{
+                border-top-width: 1px;
+            }
+        }
+    }
+}
+
+

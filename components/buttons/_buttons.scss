@@ -1,0 +1,18 @@
+
+@each $color, $value in $theme-colors {
+    .btn-#{$color}-shadow {
+        box-shadow: 0 .5rem 1rem rgba($value, .5);
+    }
+}
+  
+@each $color, $value in $theme-colors {
+    .btn-#{$color}-cus {
+        background: rgba($value, .3);
+        color: darken($color: $value, $amount: 10);
+        &:hover{
+            background: rgba($value, .4);
+            color: darken($color: $value, $amount: 10);
+        }
+    }
+}
+  
